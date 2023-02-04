@@ -1,6 +1,6 @@
-const catchAsyncError = require("../middlewares/catchAsyncError");
-const ErrorHandler = require("../utils/errorhandler");
-const Devotee = require("../models/Devotee");
+const catchAsyncError = require("../middlewares/catchAsyncError.js");
+const ErrorHandler = require("../utils/errorhandler.js");
+const Devotee = require("../models/Devotee.js");
 
 exports.registerDevotee = catchAsyncError(async (req, res, next) => {
   const {
