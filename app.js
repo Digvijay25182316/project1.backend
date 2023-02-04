@@ -13,7 +13,7 @@ if (process.env.NODE_ENV != "production") {
 }
 
 const corsOrigin = {
-  origin: "http://localhost:3000", //or whatever port your frontend is using
+  origin: process.env.FRONTEND_URL, //or whatever port your frontend is using
   credentials: true,
   optionSuccessStatus: 200,
 };

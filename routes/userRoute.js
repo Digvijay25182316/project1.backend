@@ -6,16 +6,11 @@ const {
   logoutUser,
   forgotPassword,
   resetPassword,
-  updatePassword,
   getOneUser,
   deleteUser,
   updateUserRole,
 } = require("../controller/userController");
-const {
-  isAuthenticated,
-  authorizeRoles,
-  authorizeAdmin,
-} = require("../middlewares/auth.js");
+const { isAuthenticated, authorizeAdmin } = require("../middlewares/auth.js");
 
 const router = express.Router();
 
