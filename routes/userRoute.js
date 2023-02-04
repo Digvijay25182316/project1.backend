@@ -9,7 +9,7 @@ const {
   getOneUser,
   deleteUser,
   updateUserRole,
-} = require("../controller/userController");
+} = require("../controller/UserController.js");
 const { isAuthenticated, authorizeAdmin } = require("../middlewares/auth.js");
 
 const router = express.Router();
