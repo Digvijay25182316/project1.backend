@@ -7,17 +7,17 @@ const ErrorMiddleWare = require("./middlewares/error.js");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const helmet = require("helmet");
+const path = require("path");
 
 if (process.env.NODE_ENV != "production") {
   require("dotenv").config({ path: `${__dirname}/config/config.env` });
 }
 
 const corsOrigin = {
-  origin: process.env.FRONTEND_URL, //or whatever port your frontend is using
+  origin: ["http://localhost:3000", process.env.FRONTEND_URL], //or whatever port your frontend is using
   credentials: true,
   optionSuccessStatus: 200,
 };
-
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors(corsOrigin));
