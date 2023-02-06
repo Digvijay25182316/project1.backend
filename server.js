@@ -11,7 +11,7 @@ process.on("uncaughtException", (err) => {
 //connection database
 connectDB();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 
 const host = `http://localhost:${port}`;
 
